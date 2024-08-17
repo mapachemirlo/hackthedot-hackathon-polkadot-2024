@@ -29,19 +29,32 @@ To get started, follow the steps below:
 
 ## Frontend
 Navigate to frontend and install dependencies
+
 `cd frontend/`
+
 `npm install`
+
 Start React app:
+
 `npm start`
+
 App will run on localhost:3000
 
 ## Smart Contracts
 Navigate to contracts folder and install dependencies
+
 `cd contracts/`
+
 Install Dependencies
+
 `npm install`
+
 Copy the .env.example file and name it .env Make sure to fill in the values for each var on the created env file
+
 `cp .env.example .env`
+
 To deploy smart contracts, run
+
 `npm run deploy:network`
+
 Network sent must be configured in hardhat.config.js file on contracts folder
