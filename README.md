@@ -24,10 +24,10 @@ Smart Contracts are built with:
 Deploy in Moonbeam
     * [ChallengeGovernance](https://moonbase.moonscan.io/address/0xACDDa47A43d704ADaaC5b049288C94e5cb401fdE)
     
-# Quickstart
+## Quickstart
 To get started, follow the steps below:
 
-## Frontend
+### Frontend
 Navigate to frontend and install dependencies
 
 `cd frontend/`
@@ -40,7 +40,7 @@ Start React app:
 
 App will run on localhost:3000
 
-## Smart Contracts
+### Smart Contracts
 Navigate to contracts folder and install dependencies
 
 `cd contracts/`
