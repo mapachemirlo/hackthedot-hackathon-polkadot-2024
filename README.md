@@ -14,6 +14,9 @@ Progress and Rewards Metrics:
 
 Users accumulate HTD tokens for their progress in the challenges, which can be exchanged for DOT as a tangible reward. As they surpass different levels of auditing, their achievements are recorded on the blockchain, creating a transparent history of their performance. The certifications awarded to users who complete the program provide clear validation of their blockchain security competence, enhancing their visibility for future job opportunities within Polkadot.
 
+## Features
+improvements migrate this MVP to Substrate
+
 ## Tech Stacks
 
 Frontend uses the following tech stacks:
@@ -58,3 +61,7 @@ To deploy smart contracts, run
 `npm run deploy:network`
 
 Network sent must be configured in hardhat.config.js file on contracts folder
+
+### Pitch
+
+][Video]()
