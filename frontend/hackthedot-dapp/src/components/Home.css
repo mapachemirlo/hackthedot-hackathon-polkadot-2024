@@ -1,0 +1,78 @@
+/* src/components/Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  .home-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .home-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .home-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-tagline {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .home-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .register-button, .login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .register-button {
+    background-color: #ff007a;
+    color: #fff;
+  }
+  
+  .login-button {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .home-footer {
+    padding: 10px 0;
+    background-color: #333;
+  }
+  
+  .polkadot {
+    color: #ff007a;
+  }
+  
