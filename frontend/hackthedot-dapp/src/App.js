@@ -5,6 +5,9 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import About from './components/About';
+import Help from './components/Help';
+import Ranking from './components/Ranking';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/ranking" element={<Ranking />} />
       </Routes>
     </Router>
   );

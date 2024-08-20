@@ -6,29 +6,32 @@ import './Home.css'; // Asegúrate de crear y enlazar el archivo CSS
 const Home = () => {
   return (
     <div className="home-container">
-      <header className="home-header">
-        <h1 className="home-title">Hack the dot</h1>
+      <header className="home-header">        
+        <Link to="/"><img className="logo" src='hack-the-dot-blanco-logo.png' alt='img'></img></Link>
         <nav className="home-nav">
           <Link to="/about">About</Link>
           <Link to="/help">Help</Link>
           <Link to="/ranking">Ranking</Link>
         </nav>
       </header>
-      <main className="home-main">
-        <h2 className="home-tagline">
-          Learn about security, overcome challenges and earn rewards
-        </h2>
-        <div className="home-buttons">
-          <Link to="/register">
-            <button className="register-button">Register</button>
-          </Link>
-          <Link to="/login">
-            <button className="login-button">Login</button>
-          </Link>
+      <main className="home-main-container">
+        <div className="home-main-subcontainer">
+          <h2 className="home-tagline">
+            Learn about security, overcome challenges and earn rewards
+          </h2>
+          <div className="home-buttons">
+            <Link to="/register" className='home-buttons-link home-buttons-link--register'>
+              <button className="home-register-button">Register</button>
+            </Link>
+            <Link to="/login" className='home-buttons-link'>
+              <button className="home-login-button">Login</button>
+            </Link>
+          </div>
         </div>
+        
       </main>
       <footer className="home-footer">
-        <p>By <span className="polkadot">Polkadot</span></p>
+        <p className='home-footer-text'>By <Link to="https://polkadot.com/" className='home-footer-link-polkadot'><img className="polkadot-logo-small" src='polkadot-logo-small.png' alt='img'></img></Link></p>
       </footer>
     </div>
   );

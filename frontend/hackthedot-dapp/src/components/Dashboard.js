@@ -4,6 +4,8 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers';
+import './Dashboard.css';
+import { Link } from 'react-router-dom';
 
 // Direcciones de los contratos desplegados
 const REWARD_MANAGER_ADDRESS = '0x8c02057a28a4ED422cDfBba180eaC6A24C1612e1';
@@ -23,6 +25,12 @@ const CHALLENGE_MANAGER_ABI = [
 ];
 
 const Dashboard = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   const [reward, setReward] = useState(0);
   const [level, setLevel] = useState(0);
   const [challenges, setChallenges] = useState([]);
@@ -70,13 +78,96 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Recompensas Disponibles: {reward} HTD</p>
-      <p>Nivel Actual: {level}</p>
-      <p>Desafíos Completados: {challenges.join(', ')}</p>
-      <button onClick={handleLogout}>Cerrar Sesión</button>
+    <div className="dashboard-container">
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <Link to="/dashboard"><img className="logo" src='hack-the-dot-blanco-logo.png' alt='img'></img></Link>
+        </div>
+
+        {/* Dropdown User Menu */}
+        <div className="navbar-user" onClick={toggleDropdown}>
+          <div className="user-info">
+            <img src="polkadot-icon.png" alt="User Logo" className="user-logo" />
+            <p className="user-name">polka.dot</p>
+            <span className="dropdown-arrow">&#5167;</span> {/* Código del ícono de flecha hacia abajo */}
+          </div>
+          {dropdownOpen && (
+            <ul className="dropdown-menu">
+              <li>
+                <button onClick={handleLogout}>Log out</button>
+              </li>
+            </ul>
+          )}
+        </div>
+
+      </nav>
+
+      {/* Sidebar */}
+      <div className="sidebar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/challenges">Challenges</a></li>
+          <li><a href="/prizes">Prizes</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <h3 className='title-home-page'>Home Page</h3>
+        <div className="cards-container">
+
+          <div className="card">
+            <div className='challenges-title-container'>
+              <h3 className='challenges-title'>Challenges</h3>
+              <p className='challenges-create-link'>+ Create Challenge</p>
+            </div>
+            <div className='challenges-container'>
+              <div>
+                <p className='challenges-subtitle'>Active Challenges<span className='hidden'>:</span> <span className='number'>{challenges.length}</span> </p>              
+              </div>
+              <div>
+                <p className='challenges-subtitle'>Closed Challenges<span className='hidden'>:</span> <span className='number'>0</span> </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className='prizes-title-container'>
+                <h3 className='prizes-title'>Prizes</h3>
+                <p className='prizes-create-link'>+ Create Prizes</p>
+              </div>
+              <div className='prizes-container'>
+                <div>
+                  <p className='prizes-subtitle'>Active Prizes<span className='hidden'>:</span> <span className='number'>{reward}</span> </p>              
+                </div>
+                <div>
+                  <p className='prizes-subtitle'>Closed Prizes<span className='hidden'>:</span> <span className='number'>0</span> </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div className="card-large">
+          <h3>Latest Activity</h3>
+          <p>{challenges.length > 0 ? challenges.join(', ') : "There isn’t any activity yet, create a challenge to start"}</p>
+          <button>Create Challenge</button>
+          
+
+          <div className='level-text'>{level}</div> 
+        </div>
+      </div>
     </div>
+    // <div>
+    //   <h2>Dashboard</h2>
+    //   <p>Recompensas Disponibles: {reward} HTD</p>
+    //   <p>Nivel Actual: {level}</p>
+    //   <p>Desafíos Completados: {challenges.join(', ')}</p>
+    //   <button onClick={handleLogout}>Cerrar Sesión</button>
+    // </div>
   );
 };
 

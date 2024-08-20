@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
+import './Register.css';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -48,31 +50,66 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h2>Registrarse</h2>
-      <input
-        type="text"
-        placeholder="Nombre de Usuario"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {!walletAddress ? (
-        <button onClick={connectWallet}>Conectar MetaMask</button>
-      ) : (
-        <button onClick={handleRegister}>Registrarse</button>
-      )}
+    <div className='register-container'>
+      <header className="register-header">
+        <Link to="/"><img className="logo" src='hack-the-dot-blanco-logo.png' alt='img'></img></Link>
+          <nav className="register-nav">
+            <Link to="/about">About</Link>
+            <Link to="/help">Help</Link>
+            <Link to="/ranking">Ranking</Link>
+          </nav>
+      </header>
+
+      <p className='back-text'><Link to="/" className='back-link'>&#60; Back</Link></p>
+      
+      <div className="register-title-form-container"> 
+        <div className="register-title-container"> 
+          <h2>Register</h2>    
+        </div>
+
+        <div className="register-form-container">
+
+          <div className='register-form-input-container'>
+            <label className='register-form-label'>Email <span className='obligatorio'>*</span></label>
+            <input className="register-form-input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          
+          <div className='register-form-input-container'>
+            <label className='register-form-label'>Username <span className='obligatorio'>*</span></label>
+            <input className="register-form-input"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          
+          <div className='register-form-input-container'>
+          <label className='register-form-label'>Password <span className='obligatorio'>*</span></label>
+            <input className="register-form-input"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className='register-form-input-container'>
+            {!walletAddress ? (
+              <button className="register-button" onClick={connectWallet}>Connect Wallet</button>
+            ) : (
+              <button className="register-button" onClick={handleRegister}>Registrarse</button>
+            )}
+          </div>
+          
+        </div>
+      </div>
+
+      <footer className="register-footer">
+        <p className='register-footer-text'>By <Link to="https://polkadot.com/" className='register-footer-link-polkadot'><img className="polkadot-logo-small" src='polkadot-logo-small.png' alt='img'></img></Link></p>
+      </footer>
+      
     </div>
   );
 };
