@@ -111,11 +111,9 @@ improvements migrate this MVP to Substrate
 
 Frontend uses the following tech stacks:
     [React](https://es.react.dev/)
-
     [Firebase](https://firebase.google.com/?hl=es)
 
 Smart Contracts are built with:
-
     [Hardhat](https://hardhat.org/) for contract deployment
 
 Deploy in Moonbeam
