@@ -160,4 +160,4 @@ Network sent must be configured in hardhat.config.js file on contracts folder
 
 ### Pitch
 
-[Video]('https://www.youtube.com/watch?v=L09ARH0C02M')
+[Video](https://www.youtube.com/watch?v=L09ARH0C02M)
