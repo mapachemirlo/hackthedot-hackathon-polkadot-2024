@@ -168,5 +168,7 @@ Network sent must be configured in hardhat.config.js file on contracts folder
 ### Members
 
 Fabia Villarruel (Product designer) [Linkedin](https://www.linkedin.com/in/fabia-villarruel/)
+
 Ivana Lebón (Research & Documentation) [Linkedin](https://www.linkedin.com/in/ivana-lebon/)
+
 Claudio Herrera (Blockchain Developer) [Linkedin](https://www.linkedin.com/in/clauherrera/)
