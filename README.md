@@ -122,6 +122,12 @@ Deploy in Moonbeam
     [ChallengeManager](https://moonbase.moonscan.io/address/0x4A4c2Def8e728A4D209bD8D3211Eb758F85105c1)
     [RewardManager](https://moonbase.moonscan.io/address/0x8c02057a28a4ED422cDfBba180eaC6A24C1612e1)
     [LevelManager](https://moonbase.moonscan.io/address/0xfd6F43bB3C1B0EC381b65f3ba0e33Da3e2785Ad4)
+
+[Pitch](https://www.youtube.com/watch?v=L09ARH0C02M)
+
+[Extended presentation](https://www.youtube.com/watch?v=s4tSUeNoufY)
+
+[Figma file](https://www.figma.com/design/O4JeFjDCXMvg4aDeb0I2TB/Hack-the-dot?node-id=0-1)
     
 ## Quickstart
 To get started, follow the steps below:
@@ -158,6 +164,9 @@ To deploy smart contracts, run
 
 Network sent must be configured in hardhat.config.js file on contracts folder
 
-### Pitch
 
-[Video](https://www.youtube.com/watch?v=L09ARH0C02M)
+### Members
+
+Fabia Villarruel (Product designer) [Linkedin](https://www.linkedin.com/in/fabia-villarruel/)
+Ivana Lebón (Research & Documentation) [Linkedin](https://www.linkedin.com/in/ivana-lebon/)
+Claudio Herrera (Blockchain Developer) [Linkedin](https://www.linkedin.com/in/clauherrera/)
