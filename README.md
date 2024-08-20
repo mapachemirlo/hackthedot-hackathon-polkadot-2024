@@ -110,16 +110,20 @@ improvements migrate this MVP to Substrate
 ## Tech Stacks
 
 Frontend uses the following tech stacks:
-    * [React](https://es.react.dev/)
-    * [Firebase](https://firebase.google.com/?hl=es)
+    [React](https://es.react.dev/)
+
+    [Firebase](https://firebase.google.com/?hl=es)
+
 Smart Contracts are built with:
-    * [Hardhat](https://hardhat.org/) for contract deployment
+
+    [Hardhat](https://hardhat.org/) for contract deployment
+
 Deploy in Moonbeam
-    * [ChallengeGovernance](https://moonbase.moonscan.io/address/0xACDDa47A43d704ADaaC5b049288C94e5cb401fdE)
-    * [HackTheDotToken](https://moonbase.moonscan.io/address/0x7204d112Ef25E664D45c49B1497BA1fB146d5323)
-    * [ChallengeManager](https://moonbase.moonscan.io/address/0x4A4c2Def8e728A4D209bD8D3211Eb758F85105c1)
-    * [RewardManager](https://moonbase.moonscan.io/address/0x8c02057a28a4ED422cDfBba180eaC6A24C1612e1)
-    * [LevelManager](https://moonbase.moonscan.io/address/0xfd6F43bB3C1B0EC381b65f3ba0e33Da3e2785Ad4)
+    [ChallengeGovernance](https://moonbase.moonscan.io/address/0xACDDa47A43d704ADaaC5b049288C94e5cb401fdE)
+    [HackTheDotToken](https://moonbase.moonscan.io/address/0x7204d112Ef25E664D45c49B1497BA1fB146d5323)
+    [ChallengeManager](https://moonbase.moonscan.io/address/0x4A4c2Def8e728A4D209bD8D3211Eb758F85105c1)
+    [RewardManager](https://moonbase.moonscan.io/address/0x8c02057a28a4ED422cDfBba180eaC6A24C1612e1)
+    [LevelManager](https://moonbase.moonscan.io/address/0xfd6F43bB3C1B0EC381b65f3ba0e33Da3e2785Ad4)
     
 ## Quickstart
 To get started, follow the steps below:
