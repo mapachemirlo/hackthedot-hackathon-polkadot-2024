@@ -129,7 +129,7 @@ Deploy in Moonbeam
 
 [Figma file](https://www.figma.com/design/O4JeFjDCXMvg4aDeb0I2TB/Hack-the-dot?node-id=0-1)
 
-[demo](https://hackthedot-test.web.app/)
+[Demo](https://hackthedot-test.web.app/)
     
 ## Quickstart
 To get started, follow the steps below:
